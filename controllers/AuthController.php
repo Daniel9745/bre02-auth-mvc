@@ -6,15 +6,15 @@ class Authcontroller{
     }
     
     public function connexion(): void {
-        $route = "connexion";
-        require "templates/connexion.phtml";
+        $template = "connexion";
+        require "templates/layout.phtml";
     }
     public function inscription(): void {
-        $route =  "inscription";
+        $template =  "inscription";
         require "templates/layout.phtml";
     }
     public function espacePerso(): void {
-        $route = "espace-perso";
+        $template = "espace-perso";
         require "templates/layout.phtml";
     }
     public function checkConnexion() {

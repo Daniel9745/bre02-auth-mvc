@@ -1,5 +1,6 @@
 <?php
 require "./controllers/AuthController.php";
+
 class Router {
     public function __construct() {
     }

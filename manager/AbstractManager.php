@@ -1,6 +1,6 @@
 <?php
 
-class UserManager
+class AbstractManager
 {
     private array $users = [];
     private PDO $db;
@@ -20,11 +20,5 @@ class UserManager
             $user,
             $password
         );
-    }
-    public function getUser(): array{
-        return $this->users;
-    }
-    public function setUser(array $users): void{
-        $this->users = $users;
     }
 }

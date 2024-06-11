@@ -15,7 +15,7 @@
 						<a href="index.php?route=connexion">connection</a>
 					</li>
                     <li>
-						<a href="index.php?route=inscrption">Inscription</a>
+						<a href="index.php?route=inscription">Inscription</a>
 					</li>
 				</ul>
 			</nav>
@@ -23,13 +23,13 @@
 		<?php
 			// votre code ici
             // require "./controllers/AuthController.php";
-		if ($route === "home") {
+		if ($template === "home") {
 			require "templates/home.phtml";
 		}
-		elseif ($route === "connexion") {
+		elseif ($template === "connexion") {
 			require "templates/connexion.phtml";
 		}
-		elseif ($route === "inscrption.phtml") {
+		elseif ($template === "inscription") {
 			require "templates/inscription.phtml";
 		}
 		?>
