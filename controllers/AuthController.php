@@ -7,7 +7,7 @@ class Authcontroller{
     
     public function connexion(): void {
         $route = "connexion";
-        require "templates/layout.phtml";
+        require "templates/connexion.phtml";
     }
     public function inscription(): void {
         $route =  "inscription";
@@ -16,6 +16,9 @@ class Authcontroller{
     public function espacePerso(): void {
         $route = "espace-perso";
         require "templates/layout.phtml";
+    }
+    public function checkConnexion() {
+        
     }
 
 
@@ -28,12 +31,3 @@ class Authcontroller{
 
 
 
-// if ($route === "home") {
-//     require "templates/home.phtml";
-// }
-// elseif ($route === "connexion") {
-//     require "templates/connexion.phtml";
-// }
-// elseif ($route === "inscrption.phtml") {
-//     require "templates/inscription.phtml";
-// }

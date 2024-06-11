@@ -22,7 +22,16 @@
 		</header>
 		<?php
 			// votre code ici
-            require "./controllers/AuthController.php";
+            // require "./controllers/AuthController.php";
+		if ($route === "home") {
+			require "templates/home.phtml";
+		}
+		elseif ($route === "connexion") {
+			require "templates/connexion.phtml";
+		}
+		elseif ($route === "inscrption.phtml") {
+			require "templates/inscription.phtml";
+		}
 		?>
 	</body>
 </html>

@@ -21,4 +21,10 @@ class UserManager
             $password
         );
     }
+    public function getUser(): array{
+        return $this->users;
+    }
+    public function setUser(array $users): void{
+        $this->users = $users;
+    }
 }

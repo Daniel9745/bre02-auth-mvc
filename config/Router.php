@@ -16,6 +16,10 @@ class Router {
                 $auth = new AuthController();
                 $auth->espacePerso();
             }
+            else if(isset($get["route"]) && $get["route"] === "check-connexion") {
+                $auth = new AuthController();
+                $auth->checkConnexion();
+            }
             // else if(!isset($get["route"])){
             //     $auth = new AuthController();
             //     $auth->home();
