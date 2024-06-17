@@ -17,10 +17,22 @@ class Authcontroller{
         $template = "espace-perso";
         require "templates/layout.phtml";
     }
-    public function checkConnexion() {
-        
+    public function home(): void {
+        $template = "home";
+        require "templates/layout.phtml";
     }
+    public function checkConnexion(): void{
 
+        if(isset($_POST["email"]) && isset($_POST["password"])){
+            $manager = new UserManager();
+            $user = $manager->getUserByEmail($_POST["email"]);
+        }
+        if($user->getId() !== null){
+            if (password_verify($_POST["password"], $user->getPassword())) {
+                $_SESSION["user"] = $user;
+            }
+        }
+    }
 
 }
 

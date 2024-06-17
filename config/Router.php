@@ -1,5 +1,5 @@
 <?php
-require "./controllers/AuthController.php";
+
 
 class Router {
     public function __construct() {
@@ -16,6 +16,10 @@ class Router {
             else if(isset($get["route"]) && $get["route"] === "espace-perso") {
                 $auth = new AuthController();
                 $auth->espacePerso();
+            }
+            else if(isset($get["route"]) && $get["route"] === "home") {
+                $auth = new AuthController();
+                $auth->home();
             }
             else if(isset($get["route"]) && $get["route"] === "check-connexion") {
                 $auth = new AuthController();
